@@ -1,0 +1,34 @@
+<html>
+  <head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'freq/styles/base.css' %}" />
+    {% comment %}
+    <link rel="stylesheet" href="/static/polls/style.css" />
+    {% endcomment %}
+  </head>
+  <body>
+    {% include "freq/head.html" %} {% if all_freq_list %}
+    <table>
+      <caption>
+        STATION LIST
+      </caption>
+      <tr>
+        <th>NAME</th>
+        <th>LATITUDE</th>
+        <th>LONGITUDE</th>
+      </tr>
+      {% for frequency in all_freq_list %}
+      <tr>
+        <td><a href="{{frequency.id}}">{{frequency.name}}</a></td>
+        <td>{{ frequency.latitude}}</td>
+        <td>{{frequency.longitude}}</td>
+        </a
+        >
+      </tr>
+      {% endfor %}
+    </table>
+    {% else %}
+    <p>No frequencies</p>
+    {% endif %}
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+  <head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'freq/styles/base.css' %}" />
+    {% comment %}
+    <link rel="stylesheet" href="/static/polls/style.css" />
+    {% endcomment %}
+  </head>
+  <body>
+    
+    {% include "freq/head.html" %} 
+    
+    <div class="content">
+        <div class="station-info">
+            <span class="span2">{{frequency.name}}</span>
+            <span>RANGE</span><span>{{frequency.range}} miles</span>
+            <span>POWER</span><span>{{object.power}} watts</span>
+            <span>UPPER</span><span>{{object.upper}} hz</span>
+            <span>LOWER</span><span>{{object.lower}} hz</span>
+            <span>LATITUDE</span><span>{{object.latitude}}</span>
+            <span>LONGITUDE</span><span>{{object.longitude}}</span>
+            
+        </div>
+        <iframe class="map-pane" src="https://www.openstreetmap.org/export/embed.html?bbox={{map_west}}%2C{{map_south}}%2C{{map_east}}%2C{{map_north}}&amp;layer=mapnik&amp;marker={{frequency.latitude}}%2C{{frequency.longitude}}"></iframe>
+
+    </div>
+
+    <a href="/freq">↩Back</a>
+    
+    {% comment %} <iframe class="map-pane" src="https://www.openstreetmap.org/export/embed.html?bbox={{map_west}}%2C{{map_south}}%2C{{map_east}}%2C{{map_north}}&amp;layer=mapnik&amp;marker={{frequency.latitude}}%2C{{frequency.longitude}}"></iframe> {% endcomment %}
+    </body>
+</html>
