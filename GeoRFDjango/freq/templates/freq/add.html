@@ -11,7 +11,7 @@
 
     <div class="content">
       <form class="station-info" method="post">{% csrf_token %}
-        {{ form.as_p}}
+        {{ form}}
 
 
         {% comment %} <label>NAME: <input type="text" name="name" id="name" class="span2"/></label>
@@ -21,7 +21,7 @@
         <label>LOWER:<input type="number" name="lower" id="lower" /></label>
         <label>LATITUDE:<input type="number" name="latitude" id="latitude"/></label>
         <label>LONGITUDE:<input type="number" name="longitude" id="longitude"/></label>{% endcomment %}
-        <input type="submit" value="Save" class="crud_button" /> 
+        <div class="span2"><input type="submit" value="SAVE" class="crud_button" /> </div>
       </form>
       <iframe
         class="map-pane"
