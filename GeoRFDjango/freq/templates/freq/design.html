@@ -1,0 +1,31 @@
+<html>
+  <head>
+
+    <link rel="stylesheet" href="" />
+
+  </head>
+  <body>
+    
+
+    
+
+    <div class="content">
+        <form class="station-info">
+            <label>NAME: <input type="text" name="name" id="name" class="span2"></label>
+            <label>RANGE:<input type="number" name="range" id="range"></label>
+            <label>POWER:<input type="number" name="power" id="power"></label>
+            <label>UPPER:<input type="number" name="upper" id="upper"></label>
+            <label>LOWER:<input type="number" name="lower" id="lower"></label>
+            <label>LATITUDE:<input type="number" name="latitude" id="latitude"></label>
+            <label>LONGITUDE:<input type="number" name="longitude" id="longitude"></label>
+            <input type="button" value="ADD" class="crud_button">
+            <div class="span2"><a href="delete/" class="crud_button">DELETE</a></div>
+            
+        </form>
+        <iframe class="map-pane" src="https://www.openstreetmap.org/export/embed.html?bbox={{map_west}}%2C{{map_south}}%2C{{map_east}}%2C{{map_north}}&amp;layer=mapnik&amp;marker={{frequency.latitude}}%2C{{frequency.longitude}}"></iframe>
+
+    </div>
+
+    <a href="/freq">↩Back</a>
+    </body>
+</html>

@@ -149,3 +149,20 @@ a {
     text-decoration: none;
     box-sizing: border-box;
 }
+
+
+
+.station-info span {
+    padding: .2em;
+    height: fit-content;
+    box-sizing: border-box;
+
+}
+
+.station-info span:nth-child(2n) {
+    grid-column: 1/2;
+}
+
+.station-info span:nth-child(2n+1) {
+    grid-column: 2/3;
+}

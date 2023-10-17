@@ -7,6 +7,7 @@ urlpatterns = [
     path("", views.IndexView.as_view(), name="index"), # This pattern leads to the default view/template
     path("<int:pk>/", views.StationView.as_view(), name="frequency"), # This pattern will show the details of
     path("<int:pk>/delete/", views.StationDelete.as_view(), name="delete"),
+    path("add/", views.StationAdd.as_view(), name="add"),
  
 
     # path("<int:pk>/", views.DetailView.as_view(), name="detail"),

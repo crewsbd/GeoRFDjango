@@ -42,3 +42,9 @@ class StationDelete(DeleteView):
 
     success_url = reverse_lazy("freq:index")
     
+class StationAdd(generic.CreateView):
+    model = Frequency
+    template_name = "freq/add.html"
+    fields = ["name", "latitude", "longitude", "range", "power", "upper", "lower"]
+
+    success_url = reverse_lazy("freq:index")
