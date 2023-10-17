@@ -140,7 +140,13 @@ header h1 {
     padding: .3em .7em;
     margin-right: .4em;
     width: fit-content;
+    transition: box-shadow 1s, color .2s;
 
+}
+.crud_button:hover {
+    box-shadow: .1em .2em .2em rgba(0, 0, 0, 0.152);
+    transition: box-shadow .4s, color .4s;
+    color: red;
 }
 a {
     display: inline-block;

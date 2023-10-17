@@ -36,13 +36,13 @@ class StationView(generic.DetailView): # Generic view version
         context['map_south'] = freq.latitude - .1
         return context
 
-class StationDelete(DeleteView):
+class StationDelete(generic.DeleteView): # This view uses a generic DeleteView class provided by Django
     model = Frequency
     template_name = "freq/delete.html"
 
     success_url = reverse_lazy("freq:index")
     
-class StationAdd(generic.CreateView):
+class StationAdd(generic.CreateView): # This view uses a generic CreateView class provided by Django
     model = Frequency
     template_name = "freq/add.html"
     fields = ["name", "latitude", "longitude", "range", "power", "upper", "lower"]
