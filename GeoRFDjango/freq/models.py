@@ -5,7 +5,7 @@ from django.contrib import admin
 
 
 # Create your models here.
-class Frequency(models.Model):
+class Frequency(models.Model): # This is the data that will be stored in the database. DB migrations are created using this.
     name = models.CharField(max_length=50)
     latitude = models.FloatField()
     longitude = models.FloatField()

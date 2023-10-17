@@ -1,1 +1,6 @@
 mysite/**
+GeoRFDjango/freq/__pycache__/models.cpython-311.pyc
+.gitignore
+GeoRFDjango/freq/__pycache__/urls.cpython-311.pyc
+GeoRFDjango/freq/__pycache__/views.cpython-311.pyc
+GeoRFDjango/freq/__pycache__/models.cpython-311.pyc

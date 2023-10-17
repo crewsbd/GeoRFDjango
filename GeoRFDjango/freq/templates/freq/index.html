@@ -1,10 +1,8 @@
+{% comment %} This page shows a list of station with links to a detail view {% endcomment %}
 <html>
   <head>
     {% load static %}
     <link rel="stylesheet" href="{% static 'freq/styles/base.css' %}" />
-    {% comment %}
-    <link rel="stylesheet" href="/static/polls/style.css" />
-    {% endcomment %}
   </head>
   <body>
     {% include "freq/head.html" %} {% if all_freq_list %}
@@ -20,13 +18,14 @@
       {% for frequency in all_freq_list %}
       <tr>
         <td><a href="{{frequency.id}}">{{frequency.name}}</a></td>
-        <td>{{ frequency.latitude}}</td>
+        <td>{{frequency.latitude}}</td>
         <td>{{frequency.longitude}}</td>
         </a
         >
       </tr>
       {% endfor %}
     </table>
+    {% comment %} <div class="crud_button"><a>ADD STATION</a></div> {% endcomment %}
     {% else %}
     <p>No frequencies</p>
     {% endif %}

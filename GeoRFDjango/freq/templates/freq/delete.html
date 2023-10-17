@@ -1,0 +1,14 @@
+<html>
+  <head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'freq/styles/base.css' %}" />
+  </head>
+  <body>
+    {% include "freq/head.html" %}
+    <form method="post">{% csrf_token %}
+        <p>Are you sure you want to delete "{{ object.name }}"?</p>
+        {{ form }}
+        <input type="submit" value="Confirm">
+    </form>
+  </body>
+</html>
